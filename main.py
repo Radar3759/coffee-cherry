@@ -31,7 +31,7 @@ resources = {
     "money": 0,
 }
 
-def coins_total():
+def coin_total():
     quarters = input("How many quarters?: ")
     dimes = input("How many dimes?: ")
     quarters_amount = float(quarters) * .25
@@ -39,7 +39,7 @@ def coins_total():
     total = quarters_amount + dimes_amount
     print(f"Your total money is {total}")
 #test coins_total f(x)
-coins_total()
+coin_total()
 # while machine_on True:
 # TODO: Print a resource report
 for key, value in resources.items():
@@ -63,21 +63,22 @@ if drink == "espresso":
     else:
         print("Sorry, there is not enough water.")
 elif drink == "latte":
-   if resources.water >= 200:
+    if resources.water >= 200:
        print("do something here")
        if milk >= 150:
-           print("do something here")
-           if coffee >= 24:
+            print("do something here")
+            if coffee >= 24:
                print("do something here")
-           else:
+            else:
                print("Sorry, there is not enough coffee")
        else:
            print("Sorry, there is not enough milk.")
-   else:
+    else:
        print("Sorry, there is not enough water.")
+
 elif drink == "cappuccino":
     if resources.water >= 250:
-        print("do something here")
+            print("do something here")
         if milk >= 100:
             print("do something here")
             if coffee >= 24:
@@ -87,11 +88,6 @@ elif drink == "cappuccino":
         else:
             print("Sorry, there is not enough milk.")
     else:
-           print("Sorry, there is not enough water.")
-
-    # TODO: Process coins (US coins)
-
-    # TODO: Make drinks
-
-    # TODO: friendly end message after drink dispensed
-    print("Have a caffeinated day!")
+        print("Sorry, there is not enough water.")
+else:
+    print("That's not a drink we serve.")
